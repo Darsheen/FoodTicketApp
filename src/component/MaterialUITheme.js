@@ -8,6 +8,7 @@ const materialTheme = createTheme({
         fontWeightMedium:300
     },
     palette: {
+        mode:'light',
         primary: {
             light: '#5E7BFD',
             main: '#5EBAFE',
