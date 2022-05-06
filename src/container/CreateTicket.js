@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import AddProductModal from './AddProductModal';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
+import { useTheme} from '@mui/material/styles';
 
 
 function* NaturalNum() {
@@ -20,6 +21,7 @@ function* NaturalNum() {
 let generator = NaturalNum();
 
 export default function CreateTicket() {
+    const theme = useTheme();
     const [ticket, setTicket] = useState(null);
     const [errorMsg, setErrorMsg] = useState("");
     const [showErrorMsg, setShowErrorMsg] = useState(false);
@@ -156,7 +158,7 @@ export default function CreateTicket() {
                                                                 : <span>{product[header]}</span>
                                                             : <IconButton
                                                                 size="medium"
-                                                                sx={{ color: '#05141f' }}
+                                                                sx={theme.palette.mode == "dark" ? { color: '#05141f' }:{ color: 'grey' }}
                                                                 onClick={() => handleRemoveProduct(rowIndex, product.sno)}>
                                                                 <DeleteIcon fontSize="inherit" />
                                                             </IconButton>}
