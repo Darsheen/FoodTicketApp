@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #05141F08;
 }
 
 code {
@@ -12,14 +13,14 @@ code {
     monospace;
 }
 
-table {
+#ticket {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  box-shadow: 2px 2px 4px 4px grey;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-table td {
+#ticket td {
   padding: 10px;
   text-align: center;
   font-size: 22px;
@@ -28,7 +29,7 @@ table td {
   font-family: 'Roboto, Helvetica, Arial, sans-serif';
 }
 
-table th {
+#ticket th {
   padding: 10px;
   text-align: center;
   font-size: 30px;
@@ -61,13 +62,13 @@ table th {
   font-family: 'Roboto, Helvetica, Arial, sans-serif';
 }
 
-.controls{
+.controls {
   font-family: 'Roboto, Helvetica, Arial, sans-serif';
   padding: 10px;
-  font-size: 22px;  
+  font-size: 22px;
 }
 
-.modalControls label{
+.modalControls label {
   display: block;
   font-size: 22px;
   color: grey;
@@ -77,4 +78,57 @@ table th {
 .hidden {
   opacity: 0;
   transition: 0.5s;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.badge {
+  background-color: white;
+  padding: 7px;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+}
+
+.graphicsTbl {
+  width: 100%;
+}
+
+#graphicsTbl td {
+  font-size: 22px;
+  padding: 3px;
+  vertical-align: bottom;
+  font-weight: bold;
+  font-family: 'Roboto, Helvetica, Arial, sans-serif';
+}
+#graphicsTbl td:last-child {
+  width: 90%;
+}
+
+.box {
+  padding: 20px;
+  background-color: white; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+.textStyle{ 
+  font-size: 25px;
+  color: grey;
+  font-weight: lighter;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid greenyellow;
+  position: relative;
+  top: -15px;
 }
