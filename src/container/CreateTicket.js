@@ -10,7 +10,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import { useTheme} from '@mui/material/styles';
 
-
 function* NaturalNum() {
     let i = 0;
     while (i < Infinity) {
@@ -21,12 +20,11 @@ function* NaturalNum() {
 let generator = NaturalNum();
 
 export default function CreateTicket() {
-    const theme = useTheme();
     const [ticket, setTicket] = useState(null);
     const [errorMsg, setErrorMsg] = useState("");
     const [showErrorMsg, setShowErrorMsg] = useState(false);
     const [openAddProductModal, setOpenAddProductModal] = useState(false);
-
+    const theme = useTheme();
     let tableHeaders = [
         "product",
         "type",
@@ -97,7 +95,7 @@ export default function CreateTicket() {
     }
 
     const handleClose = (product) => {
-        
+
         if (product !== null) {
             let tempTicket = [...ticket];
             tempTicket.push({ sno: generator.next().value, ...product });
@@ -129,7 +127,7 @@ export default function CreateTicket() {
             <AddProductModal open={openAddProductModal} handleClose={handleClose} />
             <Grid container justifyContent="center" style={{ marginTop: "100px" }}>
                 <Grid item xs={12} sm={8} md={8} >
-                    <table>
+                    <table id="ticket">
                         <thead>
                             <tr>
                                 {
